@@ -1,7 +1,18 @@
 {
   "store.product": {
     "children": [
-      
-    ]
+      "flex-layout.row#main"
+    ],
+    "flex-layout.row#main":{
+        "props":{
+            "marginTop": 7
+        },
+        "children":[
+        "flex-layout.col#left",
+        "flex-layout.col#right"
+
+        ]
+
+    }
   }
 }

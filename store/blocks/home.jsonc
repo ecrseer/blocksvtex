@@ -2,12 +2,13 @@
   "store.home": { 
     "blocks": [
       "rich-text",
-      "info-card"
+      "info-card",
+      "info-card#instanciadois"
     ]
   },
   "rich-text": { 
     "props": { 
-      "text": " vue is real awesome",
+      "text": " Móveis de **madeira**",
       "textAlignment": "CENTER",
       "textPosition": "RIGHT",
       "font": "t-heading-1"
@@ -18,10 +19,22 @@
   "isFullModeStyle": false,
       "textPosition": "right",
       "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
-      "headline": "Shining chrome",
+      "headline": "**Racks lindos**",
       "subhead": "Detalhes finalizadores de metal.<br>Available until January 2020.",
       "callToActionMode": "link",
-      "callToActionText": "Go to collection",
+      "callToActionText": "Descobrir esse móvel",
       "textAlignment": "center"}
+  },
+  "info-card#instanciadois":{
+  "props":{
+
+    "textPosition":"left",
+    "imageUrl": "https://appliancetheme.vteximg.com.br/arquivos/cozinha-cinza-min.png",
+    "isFullModeStyle":true,
+    "callToActionMode":"button",
+    "callToActionText":"Venha ver",
+    "headline":"Racks incríveis"
+
+    }
   }
 }
