@@ -1,8 +1,10 @@
 {
   "store.home": { 
     "blocks": [
+      "modal-trigger#first",
       "responsive-layout.desktop#desktop",
       "responsive-layout.mobile#mobile",
+      "tab-layout",
       "rich-text",
       "info-card",
       "info-card#instanciadois",
@@ -12,8 +14,90 @@
       
     ]
   },
+  "modal-layout#first":{
+    "children":[
+      "rich-text#1"
+    ]
+  },
+  "rich-text#trigger": {
+    "props": {
+      "text": "abrir modal"
+    }
+  },
+  "modal-trigger#first":{
+    "children": [
+      "rich-text#trigger",
+      "modal-layout#first"
+    ]
+  },
+
+  "rich-text#1": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = majorAppliances",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+  "rich-text#2": {
+    "props": {
+      "text": "Área do conteúdo da tab-list.item com  tabId = electronics",
+      "textPosition": "CENTER",
+      "font": "t-heading-3"
+    }
+  },
+
+  "tab-content.item#1": {
+    "children": [
+      "rich-text#1"
+    ],
+    "props": {
+      "tabId": "majorAppliances"
+    }
+  },
+  "tab-content.item#2": {
+    "children": [
+      "rich-text#2"
+    ],
+    "props": {
+      "tabId": "electronics"
+    }
+  },
+  "tab-content": {
+    "children": [
+      "tab-content.item#1",
+      "tab-content.item#2"
+      ]
+  },
 
 
+
+  "tab-list.item#1": {
+    "props": {
+      "tabId": "majorAppliances",
+      "label": "Major Appliances",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#2": {
+    "props": {
+      "tabId": "electronics",
+      "label": "Electronics"
+    }
+  },
+  "tab-list": {
+    "children": [
+      "tab-list.item#1",
+      "tab-list.item#2"
+      ]
+  },
+  
+  "tab-layout": {
+    "children": [
+      "tab-list",
+      "tab-content"
+    ]
+  }
+,  
 
 "responsive-layout.desktop#desktop": {
   "children": ["rich-text#desktop",
